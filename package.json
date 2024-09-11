@@ -37,7 +37,7 @@
     "scripts": {
       "build": "vsce package",  
       "publish": "vsce publish",
-      "login": "vsce login your_publisher_name", 
+      "login": "vsce luismachadoreis", 
       "test": "echo \"No tests configured\""
     },  
     "devDependencies": {
