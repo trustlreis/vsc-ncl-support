@@ -46,7 +46,7 @@ To get started, you need to clone the repository from GitHub and set up the exte
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/trustlreis/vsc-ncl-support.git
+   git clone https://github.com/luismr/vsc-ncl-support.git
    ```
 
 2. Navigate to the project directory:
@@ -141,4 +141,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 Special thanks to [Trustly's NCL repository](https://github.com/TrustlyInc/ncl) for the inspiration and documentation.
 
-For the source code of this Visual Studio Code extension, visit [vsc-ncl-support on GitHub](https://github.com/trustlreis/vsc-ncl-support).
+For the source code of this Visual Studio Code extension, visit [vsc-ncl-support on GitHub](https://github.com/luismr/vsc-ncl-support.git).
