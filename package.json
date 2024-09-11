@@ -3,7 +3,7 @@
     "displayName": "NCL Language Support",
     "description": "Provides syntax highlighting, snippets, and IntelliSense for NCL",
     "version": "0.1.0",
-    "publisher": "Luis Machado Reis",
+    "publisher": "luismachadoreis",
     "repository": {
       "type": "git",
       "url": "https://github.com/trustlreis/vsc-ncl-support.git"
