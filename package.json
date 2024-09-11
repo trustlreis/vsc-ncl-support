@@ -1,0 +1,45 @@
+{
+    "name": "ncl-vscode-extension",
+    "displayName": "NCL Language Support",
+    "description": "Provides syntax highlighting, snippets, and IntelliSense for NCL",
+    "version": "0.1.0",
+    "engines": {
+        "vscode": "^1.60.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [
+            {
+                "id": "ncl",
+                "aliases": [
+                    "NCL",
+                    "ncl"
+                ],
+                "extensions": [
+                    ".ncl"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "ncl",
+                "scopeName": "source.ncl",
+                "path": "./syntaxes/ncl.tmLanguage.json"
+            }
+        ]
+    },
+    "activationEvents": [
+        "onLanguage:ncl"
+    ],
+    "main": "./src/extension.js",
+    "scripts": {
+        "build": "vsce package",
+        "test": "echo \"No tests configured\""
+    },
+    "devDependencies": {
+        "vsce": "^2.15.0"
+    }
+}
