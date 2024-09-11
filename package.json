@@ -1,12 +1,12 @@
 {
     "name": "ncl-vscode-extension",
-    "displayName": "NCL Language Support",
+    "displayName": "Advanced NCL Language Support",  
     "description": "Provides syntax highlighting, snippets, and IntelliSense for NCL",
-    "version": "0.1.0",
+    "version": "0.1.1",
     "publisher": "luismachadoreis",
     "repository": {
       "type": "git",
-      "url": "https://github.com/trustlreis/vsc-ncl-support.git"
+      "url": "https://github.com/luismr/vsc-ncl-support.git"
     },
     "engines": {
       "vscode": "^1.60.0"
