@@ -1,125 +1,124 @@
 {
-    "scopeName": "source.ncl",
-    "name": "NCL",
-    "patterns": [
-      { "include": "#comments" },
-      { "include": "#modules" },
-      { "include": "#rules" },
-      { "include": "#selectors" },
-      { "include": "#declarationBlocks" },
-      { "include": "#compositionBlocks" },
-      { "include": "#moduleImports" },
-      { "include": "#nestedRules" },
-      { "include": "#whenThenBlocks" }
-    ],
-    "repository": {
-      "comments": {
-        "patterns": [
-          {
-            "name": "comment.line.ncl",
-            "match": "#.*$"
-          },
-          {
-            "name": "comment.block.ncl",
-            "begin": "/\\*",
-            "end": "\\*/"
-          }
-        ]
-      },
-      "modules": {
-        "patterns": [
-          {
-            "name": "entity.name.module.ncl",
-            "match": "\\bmodule\\b"
-          }
-        ]
-      },
-      "rules": {
-        "patterns": [
-          {
-            "name": "entity.name.rule.ncl",
-            "match": "\\brule\\b"
-          }
-        ]
-      },
-      "selectors": {
-        "patterns": [
-          {
-            "name": "entity.name.selector.ncl",
-            "match": "\\b(selector1|selector2|...)\\b"
-          }
-        ]
-      },
-      "declarationBlocks": {
-        "patterns": [
-          {
-            "name": "meta.block.declaration.ncl",
-            "begin": "\\b{\\b",
-            "end": "\\b}\\b",
-            "contentName": "declaration"
-          }
-        ]
-      },
-      "compositionBlocks": {
-        "patterns": [
-          {
-            "name": "meta.block.composition.ncl",
-            "begin": "\\bcompose\\b",
-            "end": "\\bend\\b",
-            "contentName": "composition"
-          }
-        ]
-      },
-      "moduleImports": {
-        "patterns": [
-          {
-            "name": "keyword.import.module.ncl",
-            "match": "\\bimport\\b"
-          }
-        ]
-      },
-      "nestedRules": {
-        "patterns": [
-          {
-            "name": "meta.block.nested-rule.ncl",
-            "begin": "\\bnode\\b",
-            "end": "\\bend\\b",
-            "patterns": [
-              {
-                "include": "#rules"
-              },
-              {
-                "include": "#selectors"
-              },
-              {
-                "include": "#declarationBlocks"
-              }
-            ]
-          }
-        ]
-      },
-      "whenThenBlocks": {
-        "patterns": [
-          {
-            "name": "meta.block.when.ncl",
-            "begin": "\\bwhen\\b",
-            "end": "\\bend\\b",
-            "patterns": [
-              {
-                "name": "meta.block.then.ncl",
-                "begin": "\\bthen\\b",
-                "end": "(?=\\bend\\b)", 
-                "contentName": "source.js",
-                "patterns": [
-                  {
-                    "include": "source.js" 
-                  }
-                ]
-              }
-            ]
-          }
-        ]
-      }
+  "scopeName": "source.ncl",
+  "name": "NCL",
+  "patterns": [
+    { "include": "#whenThenBlocks" },
+    { "include": "#comments" },
+    { "include": "#modules" },
+    { "include": "#rules" },
+    { "include": "#selectors" },
+    { "include": "#declarationBlocks" },
+    { "include": "#compositionBlocks" },
+    { "include": "#moduleImports" },
+    { "include": "#nestedRules" }
+  ],
+  "repository": {
+    "whenThenBlocks": {
+      "patterns": [
+        {
+          "name": "meta.block.when.ncl",
+          "begin": "\\bwhen\\b",
+          "end": "\\bend\\b",
+          "patterns": [
+            {
+              "name": "meta.block.then.ncl",
+              "begin": "\\bthen\\b",
+              "end": "(?=\\bend\\b)", 
+              "contentName": "source.js",  
+              "patterns": [
+                {
+                  "include": "source.js"  
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "comments": {
+      "patterns": [
+        {
+          "name": "comment.line.ncl",
+          "match": "#.*$"
+        },
+        {
+          "name": "comment.block.ncl",
+          "begin": "/\\*",
+          "end": "\\*/"
+        }
+      ]
+    },
+    "modules": {
+      "patterns": [
+        {
+          "name": "entity.name.module.ncl",
+          "match": "\\bmodule\\b"
+        }
+      ]
+    },
+    "rules": {
+      "patterns": [
+        {
+          "name": "entity.name.rule.ncl",
+          "match": "\\brule\\b"
+        }
+      ]
+    },
+    "selectors": {
+      "patterns": [
+        {
+          "name": "entity.name.selector.ncl",
+          "match": "\\b(selector1|selector2|...)\\b"
+        }
+      ]
+    },
+    "declarationBlocks": {
+      "patterns": [
+        {
+          "name": "meta.block.declaration.ncl",
+          "begin": "\\b{\\b",
+          "end": "\\b}\\b",
+          "contentName": "declaration"
+        }
+      ]
+    },
+    "compositionBlocks": {
+      "patterns": [
+        {
+          "name": "meta.block.composition.ncl",
+          "begin": "\\bcompose\\b",
+          "end": "\\bend\\b",
+          "contentName": "composition"
+        }
+      ]
+    },
+    "moduleImports": {
+      "patterns": [
+        {
+          "name": "keyword.import.module.ncl",
+          "match": "\\bimport\\b"
+        }
+      ]
+    },
+    "nestedRules": {
+      "patterns": [
+        {
+          "name": "meta.block.nested-rule.ncl",
+          "begin": "\\bnode\\b",
+          "end": "\\bend\\b",
+          "patterns": [
+            {
+              "include": "#rules"
+            },
+            {
+              "include": "#selectors"
+            },
+            {
+              "include": "#declarationBlocks"
+            }
+          ]
+        }
+      ]
     }
   }
-  
+}

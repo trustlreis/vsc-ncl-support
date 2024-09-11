@@ -35,9 +35,11 @@
     ],
     "main": "./src/extension.js",
     "scripts": {
-      "build": "vsce package",
+      "build": "vsce package",  
+      "publish": "vsce publish",
+      "login": "vsce login your_publisher_name", 
       "test": "echo \"No tests configured\""
-    },
+    },  
     "devDependencies": {
       "vsce": "^2.5.0"
     }
